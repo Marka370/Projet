@@ -1,0 +1,32 @@
+# Lance la mise en place du serveur Discord depuis GitHub (pratique sur téléphone).
+# Onglet « Actions » > « Mise en place du serveur Discord » > « Run workflow ».
+# Secrets nécessaires (Settings > Secrets and variables > Actions) :
+#   DISCORD_TOKEN (obligatoire) et GUILD_ID (optionnel)
+name: Mise en place du serveur Discord
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: discord-setup
+  cancel-in-progress: false
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Configurer le serveur
+        run: python -m bot setup
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          GUILD_ID: ${{ secrets.GUILD_ID }}

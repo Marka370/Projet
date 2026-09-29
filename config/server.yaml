@@ -1,0 +1,426 @@
+# =====================================================================
+#  Structure du serveur Discord
+# ---------------------------------------------------------------------
+#  Ce fichier décrit TOUT le serveur : rôles, catégories, salons,
+#  permissions, messages automatiques et réglages du bot.
+#  Modifie-le puis relance la mise en place (workflow GitHub
+#  « Mise en place du serveur » ou commande /setup dans Discord).
+#
+#  - Les « key » sont des identifiants internes : ne les change pas
+#    (le bot s'en sert), mais tu peux changer librement les « name ».
+#  - Les noms de salons textuels doivent être en minuscules, sans espace.
+#  - Les permissions utilisent les noms de discord.py :
+#    https://discordpy.readthedocs.io/en/stable/api.html#discord.Permissions
+#  - Dans les « permissions » d'une catégorie ou d'un salon, la cible
+#    « everyone » désigne @everyone, sinon on utilise la key d'un rôle.
+#    Un salon hérite des permissions de sa catégorie ; ce qu'il définit
+#    lui-même remplace l'entrée de la catégorie pour la même cible.
+# =====================================================================
+
+server:
+  verification_level: medium          # none / low / medium / high / highest
+  explicit_content_filter: all_members  # disabled / no_role / all_members
+  default_notifications: only_mentions  # all_messages / only_mentions
+  afk_channel: afk                    # key d'un salon vocal
+  afk_timeout: 300                    # secondes
+  # Salons créés par défaut par Discord à supprimer (s'ils existent)
+  remove_default_channels:
+    - "général"
+    - "general"
+    - "Général"
+    - "General"
+    - "Salons textuels"
+    - "Salons vocaux"
+    - "Text Channels"
+    - "Voice Channels"
+
+# ---------------------------------------------------------------------
+#  Rôles — du plus haut au plus bas dans la hiérarchie.
+#  staff: true => le rôle voit les tickets et n'est pas filtré par l'automod.
+#  self_role    => rôle que les membres s'attribuent eux-mêmes dans #rôles.
+# ---------------------------------------------------------------------
+roles:
+  - key: fondateur
+    name: "👑 Fondateur"
+    color: "#f1c40f"
+    hoist: true
+    staff: true
+    permissions: [administrator]
+
+  - key: admin
+    name: "🛡️ Administrateur"
+    color: "#e74c3c"
+    hoist: true
+    staff: true
+    permissions: [administrator]
+
+  - key: moderateur
+    name: "⚔️ Modérateur"
+    color: "#3498db"
+    hoist: true
+    staff: true
+    permissions:
+      - kick_members
+      - ban_members
+      - moderate_members
+      - manage_messages
+      - manage_threads
+      - manage_nicknames
+      - mute_members
+      - deafen_members
+      - move_members
+      - view_audit_log
+      - mention_everyone
+
+  - key: helper
+    name: "🤝 Support"
+    color: "#1abc9c"
+    hoist: true
+    staff: true
+    permissions: [manage_messages, moderate_members, move_members]
+
+  - key: dev
+    name: "🛠️ Développeur"
+    color: "#9b59b6"
+    hoist: true
+    permissions: []
+
+  - key: createur
+    name: "🎥 Créateur de contenu"
+    color: "#ff66cc"
+    hoist: true
+    permissions: []
+
+  - key: testeur
+    name: "🧪 Testeur"
+    color: "#e67e22"
+    permissions: []
+
+  - key: member
+    name: "✅ Membre"
+    color: "#95a5a6"
+    permissions:
+      - view_channel
+      - send_messages
+      - send_messages_in_threads
+      - create_public_threads
+      - read_message_history
+      - add_reactions
+      - attach_files
+      - embed_links
+      - use_external_emojis
+      - use_external_stickers
+      - use_application_commands
+      - change_nickname
+      - connect
+      - speak
+      - stream
+      - use_voice_activation
+      - use_embedded_activities
+
+  # --- Rôles à choisir soi-même (#rôles) ---
+  - key: notif_annonces
+    name: "📢 Notif Annonces"
+    self_role: {emoji: "📢", label: "Annonces"}
+  - key: notif_devlog
+    name: "📰 Notif Devlog"
+    self_role: {emoji: "📰", label: "Devlog de nos jeux"}
+  - key: notif_events
+    name: "🎉 Notif Événements"
+    self_role: {emoji: "🎉", label: "Événements"}
+  - key: notif_lfg
+    name: "🔎 Cherche des joueurs"
+    mentionable: true
+    self_role: {emoji: "🔎", label: "Recherche de joueurs"}
+  - key: plat_pc
+    name: "🖥️ PC"
+    self_role: {emoji: "🖥️", label: "PC"}
+  - key: plat_console
+    name: "🎮 Console"
+    self_role: {emoji: "🎮", label: "Console"}
+  - key: plat_mobile
+    name: "📱 Mobile"
+    self_role: {emoji: "📱", label: "Mobile"}
+
+# ---------------------------------------------------------------------
+#  Catégories et salons (dans l'ordre d'affichage)
+#  type : text / news / forum / voice
+#  (news = salon d'annonces, nécessite que la « Communauté » soit activée
+#   dans les paramètres du serveur, sinon un salon textuel est créé)
+# ---------------------------------------------------------------------
+categories:
+  - key: accueil
+    name: "📌 ACCUEIL"
+    permissions:
+      everyone: {allow: [view_channel, read_message_history], deny: [send_messages, add_reactions, create_public_threads]}
+    channels:
+      - key: welcome
+        name: "👋・bienvenue"
+        type: text
+        topic: "Les nouveaux arrivants sont accueillis ici."
+      - key: rules
+        name: "📜・règlement"
+        type: text
+        topic: "Le règlement du serveur. À lire avant tout !"
+        message:
+          title: "📜 Règlement du serveur"
+          color: "#e74c3c"
+          description: |
+            Bienvenue ! Pour que tout le monde passe un bon moment, merci de respecter ces règles.
+
+            **1. Respect avant tout** — Aucune insulte, harcèlement, discrimination ou propos haineux.
+            **2. Pas de spam** — Pas de flood, de messages en majuscules, ni de mentions abusives.
+            **3. Pas de pub** — Aucune publicité (serveurs, réseaux, liens) sans l'accord du staff, y compris en MP.
+            **4. Contenu approprié** — Aucun contenu NSFW, choquant, violent ou illégal.
+            **5. Les bons salons** — Utilise chaque salon pour son sujet.
+            **6. Pas de triche** — Pas de cheats, hacks, ni partage de comptes ou de contenus piratés.
+            **7. Vie privée** — Ne partage jamais d'infos personnelles (les tiennes ou celles des autres).
+            **8. Le staff a le dernier mot** — En cas de souci, ouvre un ticket plutôt que de débattre en public.
+            **9. Conditions de Discord** — Tu dois respecter les CGU et les règles de la communauté Discord.
+
+            ⚠️ Sanctions progressives : avertissement → mute → expulsion → bannissement.
+      - key: verification
+        name: "✅・vérification"
+        type: text
+        topic: "Clique sur le bouton pour accéder au serveur."
+        permissions:
+          member: {deny: [view_channel]}
+        panel: verification
+        message:
+          title: "✅ Vérification"
+          color: "#2ecc71"
+          description: |
+            Tu as lu le **règlement** ?
+            Clique sur le bouton ci-dessous pour l'accepter et débloquer l'accès à tout le serveur !
+      - key: announcements
+        name: "📢・annonces"
+        type: news
+        topic: "Les annonces officielles du serveur."
+        permissions:
+          everyone: {deny: [view_channel]}
+          member: {allow: [view_channel, add_reactions], deny: [send_messages]}
+          moderateur: {allow: [send_messages]}
+      - key: roles
+        name: "🎭・rôles"
+        type: text
+        topic: "Choisis tes rôles et tes notifications."
+        permissions:
+          everyone: {deny: [view_channel]}
+          member: {allow: [view_channel], deny: [send_messages]}
+        panel: roles
+        message:
+          title: "🎭 Choisis tes rôles"
+          color: "#9b59b6"
+          description: |
+            Clique sur un bouton pour **ajouter ou retirer** le rôle correspondant.
+
+            📢 **Annonces** — être notifié des annonces importantes
+            📰 **Devlog** — suivre l'avancée de nos jeux
+            🎉 **Événements** — tournois, soirées jeux, concours…
+            🔎 **Recherche de joueurs** — être mentionné quand quelqu'un cherche des coéquipiers
+            🖥️ 🎮 📱 — indique sur quelle(s) plateforme(s) tu joues
+
+  - key: communaute
+    name: "💬 COMMUNAUTÉ"
+    permissions:
+      everyone: {deny: [view_channel]}
+      member: {allow: [view_channel]}
+    channels:
+      - key: general
+        name: "💬・discussion"
+        type: text
+        topic: "Discussion générale. Reste cool et respectueux !"
+      - key: medias
+        name: "📸・médias"
+        type: text
+        slowmode: 10
+        topic: "Partage tes images, vidéos et créations."
+      - key: memes
+        name: "😂・memes"
+        type: text
+        topic: "Les memes, c'est ici."
+      - key: suggestions
+        name: "💡・suggestions"
+        type: text
+        slowmode: 60
+        topic: "Propose tes idées pour améliorer le serveur (utilise /sondage pour les votes)."
+      - key: evenements
+        name: "🎉・événements"
+        type: text
+        topic: "Tournois, soirées jeux et concours organisés par le staff."
+        permissions:
+          member: {allow: [view_channel, add_reactions], deny: [send_messages]}
+          moderateur: {allow: [send_messages]}
+      - key: commandes
+        name: "🤖・commandes-bot"
+        type: text
+        topic: "Utilise les commandes du bot ici."
+
+  - key: jeux
+    name: "🎮 JEUX"
+    permissions:
+      everyone: {deny: [view_channel]}
+      member: {allow: [view_channel]}
+    channels:
+      - key: discussions_jeux
+        name: "🎮・discussions-jeux"
+        type: text
+        topic: "Parle de tes jeux du moment."
+      - key: lfg
+        name: "🔎・recherche-de-joueurs"
+        type: text
+        slowmode: 30
+        topic: "Cherche des coéquipiers : jeu, plateforme, horaire. Tu peux mentionner @🔎 Cherche des joueurs."
+      - key: clips
+        name: "🏆・clips-et-exploits"
+        type: text
+        slowmode: 15
+        topic: "Tes meilleurs moments en jeu."
+
+  - key: studio
+    name: "🛠️ NOS JEUX"
+    permissions:
+      everyone: {deny: [view_channel]}
+      member: {allow: [view_channel]}
+    channels:
+      - key: devlog
+        name: "📰・devlog"
+        type: news
+        topic: "Les nouvelles de nos jeux en développement."
+        permissions:
+          member: {allow: [view_channel, add_reactions], deny: [send_messages]}
+          dev: {allow: [send_messages, attach_files, embed_links]}
+      - key: idees
+        name: "💡・idées-de-jeux"
+        type: text
+        slowmode: 30
+        topic: "Proposez vos idées pour nos futurs jeux !"
+      - key: bugs
+        name: "🐞・bugs-et-retours"
+        type: text
+        topic: "Signale un bug ou donne ton avis sur nos jeux."
+      - key: beta
+        name: "🧪・beta-test"
+        type: text
+        topic: "Réservé aux testeurs."
+        permissions:
+          member: {deny: [view_channel]}
+          testeur: {allow: [view_channel]}
+          dev: {allow: [view_channel]}
+      - key: dev_prive
+        name: "🔒・dev-privé"
+        type: text
+        topic: "Espace de travail de l'équipe de développement."
+        permissions:
+          member: {deny: [view_channel]}
+          dev: {allow: [view_channel]}
+
+  - key: vocaux
+    name: "🔊 VOCAUX"
+    permissions:
+      everyone: {deny: [view_channel]}
+      member: {allow: [view_channel, connect, speak]}
+    channels:
+      - key: vocal_general
+        name: "🔊 Général"
+        type: voice
+      - key: partie_1
+        name: "🎮 Partie 1"
+        type: voice
+      - key: partie_2
+        name: "🎮 Partie 2"
+        type: voice
+      - key: partie_duo
+        name: "👥 Duo"
+        type: voice
+        user_limit: 2
+      - key: partie_squad
+        name: "👥 Squad (4)"
+        type: voice
+        user_limit: 4
+      - key: chill
+        name: "🎧 Chill & musique"
+        type: voice
+      - key: afk
+        name: "💤 AFK"
+        type: voice
+        permissions:
+          member: {allow: [view_channel, connect], deny: [speak]}
+
+  - key: support
+    name: "🆘 SUPPORT"
+    permissions:
+      everyone: {deny: [view_channel]}
+      member: {allow: [view_channel]}
+    channels:
+      - key: tickets
+        name: "🎫・ouvrir-un-ticket"
+        type: text
+        topic: "Besoin d'aide ? Ouvre un ticket privé avec le staff."
+        permissions:
+          member: {allow: [view_channel], deny: [send_messages]}
+        panel: tickets
+        message:
+          title: "🎫 Support"
+          color: "#3498db"
+          description: |
+            Un problème, une question, un signalement ou une demande de partenariat ?
+            Clique sur le bouton pour ouvrir un **ticket privé** : seul le staff et toi pourrez le voir.
+
+  - key: staff
+    name: "🛡️ STAFF"
+    permissions:
+      everyone: {deny: [view_channel]}
+      moderateur: {allow: [view_channel]}
+      helper: {allow: [view_channel]}
+    channels:
+      - key: staff_chat
+        name: "💬・staff"
+        type: text
+      - key: sanctions
+        name: "🔨・sanctions"
+        type: text
+        topic: "Historique des sanctions (rempli automatiquement par le bot)."
+        permissions:
+          moderateur: {allow: [view_channel], deny: [send_messages]}
+          helper: {allow: [view_channel], deny: [send_messages]}
+      - key: logs
+        name: "📋・logs"
+        type: text
+        topic: "Journal automatique : messages supprimés/modifiés, arrivées, départs…"
+        permissions:
+          moderateur: {allow: [view_channel], deny: [send_messages]}
+          helper: {deny: [view_channel]}
+      - key: staff_vocal
+        name: "🔊 Réunion staff"
+        type: voice
+
+# ---------------------------------------------------------------------
+#  Réglages du bot
+# ---------------------------------------------------------------------
+bot:
+  # Message posté dans #bienvenue à chaque arrivée.
+  # Variables : {member} {name} {server} {count} {rules} {verification}
+  welcome_message: |
+    Bienvenue {member} sur **{server}** ! 🎉
+    Tu es notre **{count}ᵉ** membre.
+    👉 Lis le {rules} puis valide-le dans {verification} pour accéder au serveur.
+
+  # Alerte dans #logs si un compte a moins de N jours (anti-raid).
+  new_account_days: 7
+
+  automod:
+    block_invites: true         # supprime les invitations vers d'autres serveurs
+    max_mentions: 5             # mentions max dans un message
+    spam:
+      messages: 6               # plus de 6 messages…
+      seconds: 8                # …en 8 secondes = spam
+    timeout_minutes: 10         # mute appliqué en cas de spam / mentions abusives
+    banned_words: []            # ex. ["motinterdit1", "motinterdit2"]
+
+  # Sanctions automatiques selon le nombre d'avertissements (/warn)
+  # nombre d'avertissements : durée du mute en minutes
+  warn_thresholds:
+    3: 60
+    5: 1440
+    7: 10080
