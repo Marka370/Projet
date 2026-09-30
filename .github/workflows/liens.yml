@@ -1,0 +1,30 @@
+# Vérifie que les liens de la bibliothèque de ressources fonctionnent toujours.
+name: Vérification des liens
+
+on:
+  push:
+    paths:
+      - "ressources/**"
+      - ".github/workflows/liens.yml"
+  schedule:
+    - cron: "17 6 * * 1"   # chaque lundi matin
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  liens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier les liens
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Certains sites (Steam, Sketchfab…) bloquent les robots : 403/429 ne sont pas des liens morts.
+          args: >-
+            --no-progress
+            --max-retries 3
+            --accept 200..=299,403,429
+            'ressources/**/*.md'
+          fail: true

@@ -1,3 +1,12 @@
+# 🗂️ Projet
+
+| Dossier | Contenu |
+|---|---|
+| 📚 [`ressources/`](ressources/README.md) | **Bibliothèque de ressources** classée par thème (code, animations, mapping, assets libres, outils…) et par projet (Naruto RP…) |
+| 🤖 `bot/`, `config/` | Bot Discord et mise en place automatique du serveur (détails ci-dessous) |
+
+---
+
 # 🎮 Bot & serveur Discord communautaire
 
 Ce projet met en place **tout le serveur Discord automatiquement** (rôles, salons, permissions, règlement…) et fournit un **bot** pour la modération et le côté pratique du serveur.
