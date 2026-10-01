@@ -12,6 +12,8 @@ Ressources trouvées sur Internet pour nos projets : code, animations, modèles,
 | Section | Contenu |
 |---|---|
 | 🧑‍💻 [Garry's Mod – Code Lua](gmod/code-lua.md) | Docs, éditeurs, frameworks RP, bibliothèques, admin, sécurité, publication Workshop |
+| 🖼️ [Garry's Mod – Interfaces (HUD, menus)](gmod/interfaces-ui.md) | Bibliothèques UI, HUD et menus open source, 3D2D, inventaires |
+| ⚙️ [Garry's Mod – Scripts & systèmes](gmod/scripts-systemes.md) | Sauvegarde, réseau, permissions, animations par le code |
 | 🎬 [Garry's Mod – Animations](gmod/animations.md) | Bases d'animation (wOS / DynaBase), packs, créer ses propres animations |
 | 🧍 [Garry's Mod – Modèles & playermodels](gmod/modeles-playermodels.md) | Porter / créer des playermodels, rig ValveBiped, VRoid |
 | 🏗️ [Garry's Mod – Mapping](gmod/mapping.md) | Hammer++, compilation, décompilation, textures, tutoriels |
@@ -25,7 +27,7 @@ Ressources trouvées sur Internet pour nos projets : code, animations, modèles,
 ### Par projet
 | Projet | État |
 |---|---|
-| 🍥 [Naruto RP (Garry's Mod)](projets/naruto-rp/README.md) | 🔎 Recherche de ressources |
+| 🍥 [Naruto RP (Garry's Mod)](projets/naruto-rp/README.md) | 🛠️ Développement : addon [**naruto_base**](projets/naruto-rp/addons/naruto_base/README.md) prêt à tester |
 | ➕ *Prochain projet* | Copier [`projets/_modele`](projets/_modele/README.md) |
 
 ---

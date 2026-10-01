@@ -6,7 +6,11 @@
 |---|---|
 | **Jeu** | Garry's Mod |
 | **Type** | Serveur roleplay dans l'univers Naruto |
-| **État** | 🔎 Recherche de ressources |
+| **État** | 🛠️ Développement |
+
+## 🧩 Notre addon : Naruto Base
+
+👉 [**addons/naruto_base**](addons/naruto_base/README.md) : base de serveur prête à l'emploi (création de personnage, chakra, jutsus, barre de jutsus, HUD, livre des jutsus, rangs, sauvegarde, commandes admin) + 6 jutsus d'exemple. Testée automatiquement.
 
 ---
 
@@ -57,6 +61,9 @@ Regarde surtout **quels addons** ils utilisent (modèles, jutsus, HUD, maps).
 
 ## 🧑‍💻 Code & exemples
 
+➡️ Voir aussi [Interfaces (HUD, menus)](../../gmod/interfaces-ui.md) et [Scripts & systèmes](../../gmod/scripts-systemes.md).
+
+
 | | Ressource | Contenu | Remarque |
 |---|---|---|---|
 | 🟢 | [Aykii_HUD](https://github.com/Aykiiro/Aykii_HUD) | HUD Naruto RP pour DarkRP | Exemple concret |
@@ -68,6 +75,8 @@ Regarde surtout **quels addons** ils utilisent (modèles, jutsus, HUD, maps).
 
 - [ ] Choisir la base : **Helix** (RP structuré) ou **DarkRP** (plus d'addons existants)
 - [ ] Constituer notre **collection Workshop** (animations, modèles, maps) à partir des collections ci-dessus
-- [ ] Coder notre **système de jutsus** (chakra, temps de recharge, animations DynaBase, effets)
+- [x] Coder notre **système de jutsus** (chakra, temps de recharge, animations, effets) → [naruto_base](addons/naruto_base/README.md)
+- [ ] Tester naruto_base en jeu et ajuster l'interface
+- [ ] Ajouter des jutsus (Suiton, Fūton, Doton…) et des jutsus de clan (Sharingan, Byakugan…)
 - [ ] Créer nos premières **animations originales** à partir de Quaternius (CC0)
 - [ ] Choisir ou créer la **map** (Konoha)

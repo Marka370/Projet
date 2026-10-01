@@ -1,0 +1,35 @@
+# Teste l'addon Naruto Base et fournit une archive prête à copier dans garrysmod/addons/.
+name: Addon Naruto Base
+
+on:
+  push:
+    paths:
+      - "ressources/projets/naruto-rp/addons/**"
+      - "tests/test_naruto_base.py"
+      - "tests/gmod_stubs.lua"
+      - ".github/workflows/addon-naruto.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  addon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - name: Tester l'addon
+        run: python -m pytest -q tests/test_naruto_base.py
+      - name: Préparer l'archive
+        run: |
+          mkdir -p dist
+          cp -r ressources/projets/naruto-rp/addons/naruto_base dist/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: naruto_base
+          path: dist/

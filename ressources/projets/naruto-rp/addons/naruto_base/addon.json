@@ -1,0 +1,6 @@
+{
+	"title": "Naruto Base",
+	"type": "weapon",
+	"tags": ["roleplay", "fun"],
+	"ignore": ["*.md", "*.psd", "tests/*"]
+}
