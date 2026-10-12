@@ -2,13 +2,13 @@
  {
   "id": "intro",
   "texte": "Et si tu pouvais écrire ta propre légende de ninja ?",
-  "dit": "Et si tu pouvais écrire ta propre légende de ninja ?",
+  "dit": "Et si tu pouvais écrire ta propre légende de nindja ?",
   "pause_apres": 0.7
  },
  {
   "id": "jeu",
   "texte": "Ninja Legacy, c'est un jeu de rôle narratif, jouable directement dans ton navigateur.",
-  "dit": "Ninja Lègueussi, c'est un jeu de rôle narratif, jouable directement dans ton navigateur."
+  "dit": "Ninn-dja Lègueussi, c'est un jeu de rôle narratif, jouable directement dans ton navigateur."
  },
  {
   "id": "creation",
@@ -38,7 +38,7 @@
  {
   "id": "parchemin",
   "texte": "Le Parchemin Ninja garde toutes tes techniques : affinités élémentaires, techniques légendaires, kekkei genkai.",
-  "dit": "Le Parchemin Ninja garde toutes tes techniques : affinités élémentaires, techniques légendaires, kékéï guennkaï."
+  "dit": "Le Parchemin ninn-dja garde toutes tes techniques : affinités élémentaires, techniques légendaires, kèkeï guènnkaï."
  },
  {
   "id": "missions",
@@ -77,6 +77,6 @@
  {
   "id": "fin",
   "texte": "Ninja Legacy. Mille destins t'attendent. Rejoins-nous sur le Discord.",
-  "dit": "Ninja Lègueussi. Mille destins t'attendent. Rejoins-nous sur le Discorde."
+  "dit": "Ninn-dja Lègueussi. Mille destins t'attendent. Rejoins-nous sur le Discorde."
  }
 ]
