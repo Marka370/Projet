@@ -7,3 +7,5 @@ __pycache__/
 venv/
 video/sortie/
 video/musique/demo.wav
+video/ninja_legacy/captures/
+video/ninja_legacy/*.wav

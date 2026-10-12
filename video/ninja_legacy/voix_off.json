@@ -1,0 +1,82 @@
+[
+ {
+  "id": "intro",
+  "texte": "Et si tu pouvais écrire ta propre légende de ninja ?",
+  "dit": "Et si tu pouvais écrire ta propre légende de ninja ?",
+  "pause_apres": 0.7
+ },
+ {
+  "id": "jeu",
+  "texte": "Ninja Legacy, c'est un jeu de rôle narratif, jouable directement dans ton navigateur.",
+  "dit": "Ninja Lègueussi, c'est un jeu de rôle narratif, jouable directement dans ton navigateur."
+ },
+ {
+  "id": "creation",
+  "texte": "Tu choisis ton prénom, ton village parmi dix villages cachés, et ton clan.",
+  "dit": "Tu choisis ton prénom, ton village parmi dix villages cachés, et ton clan."
+ },
+ {
+  "id": "naissance",
+  "texte": "Même ta naissance compte : ta famille, ton milieu, tes traditions. Certaines choses ne se découvrent qu'en vivant.",
+  "dit": "Même ta naissance compte : ta famille, ton milieu, tes traditions. Certaines choses ne se découvrent qu'en vivant."
+ },
+ {
+  "id": "debut",
+  "texte": "Puis ta vie commence. À trois ans, au dojo familial.",
+  "dit": "Puis ta vie commence. À trois ans, au dojo familial."
+ },
+ {
+  "id": "choix",
+  "texte": "Chaque événement te propose des choix. Prudent ou audacieux : chaque décision a ses risques.",
+  "dit": "Chaque événement te propose des choix. Prudent ou audacieux : chaque décision a ses risques."
+ },
+ {
+  "id": "trace",
+  "texte": "Et chaque choix laisse une trace : sur tes statistiques, ton karma, ta réputation.",
+  "dit": "Et chaque choix laisse une trace : sur tes statistiques, ton karma, ta réputation."
+ },
+ {
+  "id": "parchemin",
+  "texte": "Le Parchemin Ninja garde toutes tes techniques : affinités élémentaires, techniques légendaires, kekkei genkai.",
+  "dit": "Le Parchemin Ninja garde toutes tes techniques : affinités élémentaires, techniques légendaires, kékéï guennkaï."
+ },
+ {
+  "id": "missions",
+  "texte": "Grandis, et pars en mission. Le bureau officiel… ou le marché noir, mieux payé, et bien plus risqué.",
+  "dit": "Grandis, et pars en mission. Le bureau officiel... ou le marché noir, mieux payé, et bien plus risqué."
+ },
+ {
+  "id": "carrieres",
+  "texte": "Tu peux aussi exercer un métier : médecin, diplomate, garde forestier, marchand ou instructeur.",
+  "dit": "Tu peux aussi exercer un métier : médecin, diplomate, garde forestier, marchand ou instructeur."
+ },
+ {
+  "id": "mort",
+  "texte": "Mais ici, la mort est définitive.",
+  "dit": "Mais ici... la mort est définitive.",
+  "pause_apres": 0.8
+ },
+ {
+  "id": "volontes",
+  "texte": "Avant que la roue ne s'arrête, tu rédiges tes dernières volontés : un secret à transmettre, un objet à léguer, une lettre scellée pour ton héritier.",
+  "dit": "Avant que la roue ne s'arrête, tu rédiges tes dernières volontés : un secret à transmettre, un objet à léguer, une lettre scellée pour ton héritier.",
+  "pause_apres": 0.8
+ },
+ {
+  "id": "flambeau",
+  "texte": "Puis tu passes le flambeau. Ton enfant reprend la lignée, et ton ancien personnage veille sur lui.",
+  "dit": "Puis tu passes le flambeau. Ton enfant reprend la lignée, et ton ancien personnage veille sur lui.",
+  "pause_apres": 0.8
+ },
+ {
+  "id": "dynastie",
+  "texte": "Une vie. Puis une autre. Et ta dynastie écrit sa légende.",
+  "dit": "Une vie. Puis une autre. Et ta dynastie écrit sa légende.",
+  "pause_apres": 0.8
+ },
+ {
+  "id": "fin",
+  "texte": "Ninja Legacy. Mille destins t'attendent. Rejoins-nous sur le Discord.",
+  "dit": "Ninja Lègueussi. Mille destins t'attendent. Rejoins-nous sur le Discorde."
+ }
+]
