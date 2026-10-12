@@ -60,6 +60,7 @@ DEFAUTS = {
     "images_tous_les_n_beats": 4,
     "paroles": [],
     "taille_paroles": 92,
+    "position_paroles": 0.66,
     "police": None,
     "theme": None,
 }
@@ -259,7 +260,7 @@ class Rendu:
             if courante:
                 rangees.append((courante, larg))
             places = []
-            y0 = self.H * 0.66 - (len(rangees) - 1) * hauteur_ligne / 2
+            y0 = self.H * self.cfg["position_paroles"] - (len(rangees) - 1) * hauteur_ligne / 2
             for r, (rangee, larg) in enumerate(rangees):
                 x = (self.W - larg) / 2
                 for i, m, lm in rangee:

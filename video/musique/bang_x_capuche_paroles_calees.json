@@ -1,0 +1,673 @@
+[
+  {
+    "debut": 31.82,
+    "fin": 35.89,
+    "texte": "Une brise dans la vallée, j'descends d'la selle",
+    "mots": [
+      31.82,
+      32.02,
+      32.28,
+      32.56,
+      32.76,
+      33.18,
+      33.66,
+      34.18
+    ]
+  },
+  {
+    "debut": 35.94,
+    "fin": 40.01,
+    "texte": "Une bise sur mon âme noire, elle fait la belle",
+    "mots": [
+      35.94,
+      36.12,
+      36.46,
+      36.64,
+      36.96,
+      37.19,
+      37.41,
+      37.64,
+      37.94,
+      39.78
+    ]
+  },
+  {
+    "debut": 40.06,
+    "fin": 44.79,
+    "texte": "Hé poto, les larmes coulent sur le pare-brise",
+    "mots": [
+      40.06,
+      40.34,
+      41.4,
+      41.4,
+      41.86,
+      42.34,
+      42.56,
+      42.96
+    ]
+  },
+  {
+    "debut": 44.84,
+    "fin": 48.93,
+    "texte": "Les pneus glissent sur mes yeux rouges",
+    "mots": [
+      44.84,
+      45.02,
+      45.38,
+      46.42,
+      46.74,
+      47.02,
+      47.52
+    ]
+  },
+  {
+    "debut": 48.98,
+    "fin": 53.05,
+    "texte": "Les lions roulent dans la matrice",
+    "mots": [
+      48.98,
+      49.12,
+      49.5,
+      50.1,
+      50.66,
+      51.3
+    ]
+  },
+  {
+    "debut": 53.1,
+    "fin": 57.17,
+    "texte": "Gros sourire sur le gars triste",
+    "mots": [
+      53.1,
+      53.4,
+      54.28,
+      54.76,
+      54.94,
+      55.12
+    ]
+  },
+  {
+    "debut": 57.22,
+    "fin": 62.36,
+    "texte": "Pas d'AD sans cicatrices",
+    "mots": [
+      57.22,
+      57.34,
+      58.66,
+      58.94
+    ]
+  },
+  {
+    "debut": 64.44,
+    "fin": 65.53,
+    "texte": "C'est la vie, peace",
+    "mots": [
+      64.44,
+      64.44,
+      64.44,
+      65.3
+    ]
+  },
+  {
+    "debut": 65.58,
+    "fin": 69.73,
+    "texte": "Et le temps m'baise (baise)",
+    "mots": [
+      65.58,
+      65.64,
+      66.54,
+      66.82,
+      68.98
+    ]
+  },
+  {
+    "debut": 73.18,
+    "fin": 88.15,
+    "texte": "Tant d'haine (haine) s'évacue d'mon corps et crée la tempête (oh l'blème, oh l'blème)",
+    "mots": [
+      73.18,
+      73.46,
+      74.02,
+      74.3,
+      78.96,
+      79.52,
+      79.8,
+      81.6,
+      81.88,
+      82.9,
+      83.18,
+      83.46,
+      84.62,
+      84.9
+    ]
+  },
+  {
+    "debut": 88.2,
+    "fin": 89.49,
+    "texte": "J'ai songé, j'ai songé, à fuir à Los Angeles",
+    "mots": [
+      88.2,
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54
+    ]
+  },
+  {
+    "debut": 89.54,
+    "fin": 90.29,
+    "texte": "J'me suis rongé, cerveau rodé comme un Hells Angels",
+    "mots": [
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54,
+      89.54
+    ]
+  },
+  {
+    "debut": 91.22,
+    "fin": 95.51,
+    "texte": "J'ai tapé dans l'paquet d'guinz la garo est tie-sor",
+    "mots": [
+      91.22,
+      91.54,
+      92.0,
+      92.1,
+      92.64,
+      93.08,
+      93.32,
+      93.9,
+      95.0
+    ]
+  },
+  {
+    "debut": 95.56,
+    "fin": 98.75,
+    "texte": "Dernière paire aux ied-ps, papa est posé sur l'trésor",
+    "mots": [
+      95.56,
+      95.88,
+      96.16,
+      96.39,
+      96.9,
+      97.2,
+      97.48,
+      97.9,
+      98.24
+    ]
+  },
+  {
+    "debut": 98.8,
+    "fin": 103.43,
+    "texte": "Ce flow me stresse, cette vie me gêne, ce regard me gêne",
+    "mots": [
+      98.8,
+      99.08,
+      99.36,
+      99.64,
+      99.92,
+      100.24,
+      100.5,
+      100.72,
+      101.88,
+      102.14,
+      102.56,
+      102.78
+    ]
+  },
+  {
+    "debut": 103.48,
+    "fin": 105.89,
+    "texte": "Sans cesse cette pute met \"j'aime\" (clique, j'aime)",
+    "mots": [
+      103.48,
+      103.76,
+      104.12,
+      104.28,
+      104.54,
+      104.8,
+      105.66,
+      105.74
+    ]
+  },
+  {
+    "debut": 105.94,
+    "fin": 114.33,
+    "texte": "Seul sous la capuche",
+    "mots": [
+      105.94,
+      106.04,
+      113.82,
+      114.1
+    ]
+  },
+  {
+    "debut": 114.38,
+    "fin": 116.48,
+    "texte": "Jamais lâché, peu d'quantité",
+    "mots": [
+      114.38,
+      114.84,
+      115.16,
+      115.44
+    ]
+  },
+  {
+    "debut": 116.58,
+    "fin": 118.37,
+    "texte": "On donne le temps, d'la qualité",
+    "mots": [
+      116.58,
+      116.86,
+      117.01,
+      117.16,
+      117.31,
+      117.92
+    ]
+  },
+  {
+    "debut": 118.42,
+    "fin": 120.45,
+    "texte": "Souvent spooney, tard la night",
+    "mots": [
+      118.42,
+      119.4,
+      119.68,
+      119.96,
+      120.23
+    ]
+  },
+  {
+    "debut": 120.5,
+    "fin": 128.44,
+    "texte": "On s'rappelle d'nos vies, d'la réalité",
+    "mots": [
+      120.5,
+      120.52,
+      120.85,
+      121.19,
+      121.35,
+      122.18
+    ]
+  },
+  {
+    "debut": 131.8,
+    "fin": 139.62,
+    "texte": "Dans l'regard, le vide rappelle nos démons",
+    "mots": [
+      131.8,
+      131.92,
+      132.72,
+      132.76,
+      132.8,
+      133.58,
+      133.92
+    ]
+  },
+  {
+    "debut": 147.66,
+    "fin": 151.81,
+    "texte": "Faut que j'apprenne à kiffer ma vie",
+    "mots": [
+      147.66,
+      149.44,
+      149.62,
+      150.16,
+      150.24,
+      150.78,
+      151.06
+    ]
+  },
+  {
+    "debut": 153.32,
+    "fin": 157.33,
+    "texte": "Des fois, à oublier la sère-mi",
+    "mots": [
+      153.32,
+      153.54,
+      153.74,
+      153.94,
+      154.54,
+      154.82
+    ]
+  },
+  {
+    "debut": 157.38,
+    "fin": 161.23,
+    "texte": "Mais bon tu sais, pas si facile",
+    "mots": [
+      157.38,
+      157.66,
+      157.86,
+      158.16,
+      158.44,
+      158.7,
+      161.0
+    ]
+  },
+  {
+    "debut": 161.28,
+    "fin": 163.95,
+    "texte": "Quand j'pense à c'que mes frères, sœurs vivent",
+    "mots": [
+      161.28,
+      161.56,
+      161.91,
+      162.05,
+      162.5,
+      162.7,
+      162.95,
+      163.2
+    ]
+  },
+  {
+    "debut": 165.84,
+    "fin": 169.49,
+    "texte": "Le matin, sûr, tu m'croiseras pas (tu m'croiseras jamais)",
+    "mots": [
+      165.84,
+      165.84,
+      166.42,
+      166.6,
+      166.74,
+      167.04,
+      168.42,
+      168.7,
+      169.26
+    ]
+  },
+  {
+    "debut": 169.54,
+    "fin": 172.4,
+    "texte": "J'aurais passé la nuit à combattre le noir",
+    "mots": [
+      169.54,
+      170.04,
+      170.28,
+      170.44,
+      170.64,
+      170.8,
+      171.14,
+      171.58
+    ]
+  },
+  {
+    "debut": 173.68,
+    "fin": 177.41,
+    "texte": "J'remercie l'bon Dieu, tu sais j'suis free mais bon j'suis bête",
+    "mots": [
+      173.68,
+      174.18,
+      174.64,
+      174.88,
+      175.08,
+      175.26,
+      175.58,
+      175.84,
+      176.14,
+      176.3,
+      176.66
+    ]
+  },
+  {
+    "debut": 177.98,
+    "fin": 182.03,
+    "texte": "Moi j'vais souvent vers l'obscurité dans la tempête",
+    "mots": [
+      177.98,
+      178.12,
+      178.68,
+      178.84,
+      178.94,
+      179.96,
+      180.34,
+      181.8
+    ]
+  },
+  {
+    "debut": 182.08,
+    "fin": 186.01,
+    "texte": "Elle me chuchote des flows de dingue",
+    "mots": [
+      182.08,
+      182.26,
+      182.78,
+      183.06,
+      183.34,
+      183.62,
+      185.78
+    ]
+  },
+  {
+    "debut": 186.06,
+    "fin": 190.31,
+    "texte": "Et je tords l'âme d'une gow de dingue",
+    "mots": [
+      186.06,
+      186.34,
+      186.43,
+      186.51,
+      187.46,
+      187.61,
+      187.68,
+      190.08
+    ]
+  },
+  {
+    "debut": 190.36,
+    "fin": 192.77,
+    "texte": "J'écoule des milliers de vingt",
+    "mots": [
+      190.36,
+      191.04,
+      191.3,
+      191.68,
+      192.02
+    ]
+  },
+  {
+    "debut": 194.4,
+    "fin": 198.63,
+    "texte": "J'vois des Z sur toutes les mains",
+    "mots": [
+      194.4,
+      194.82,
+      195.18,
+      195.46,
+      195.64,
+      195.9,
+      198.4
+    ]
+  },
+  {
+    "debut": 198.68,
+    "fin": 202.45,
+    "texte": "Et j'croise mes anciens cliquos",
+    "mots": [
+      198.68,
+      198.76,
+      199.2,
+      199.54,
+      202.22
+    ]
+  },
+  {
+    "debut": 202.5,
+    "fin": 205.17,
+    "texte": "M'disent \"Nabil des fois t'as une dose?\"",
+    "mots": [
+      202.5,
+      203.06,
+      203.44,
+      203.6,
+      203.78,
+      204.14,
+      204.42
+    ]
+  },
+  {
+    "debut": 206.72,
+    "fin": 210.26,
+    "texte": "Changer de vie avant qu'la vie m'change",
+    "mots": [
+      206.72,
+      207.14,
+      207.4,
+      207.62,
+      207.86,
+      208.1,
+      208.28
+    ]
+  },
+  {
+    "debut": 210.6,
+    "fin": 213.31,
+    "texte": "J'fais du PNL crois pas que je chante",
+    "mots": [
+      210.6,
+      210.84,
+      211.06,
+      211.56,
+      211.84,
+      212.04,
+      212.32,
+      213.08
+    ]
+  },
+  {
+    "debut": 213.36,
+    "fin": 218.4,
+    "texte": "À gauche, à droite, la flicaille me dévisage",
+    "mots": [
+      213.36,
+      213.66,
+      215.08,
+      215.29,
+      215.49,
+      215.69,
+      215.9,
+      216.48
+    ]
+  },
+  {
+    "debut": 218.94,
+    "fin": 222.4,
+    "texte": "On prend l'monde, c'est notre héritage",
+    "mots": [
+      218.94,
+      219.2,
+      219.36,
+      219.67,
+      220.12,
+      220.52
+    ]
+  },
+  {
+    "debut": 223.06,
+    "fin": 227.23,
+    "texte": "Celui d'la rue, grosse paix sur vous, j'tire sur la Lune",
+    "mots": [
+      223.06,
+      223.34,
+      223.98,
+      224.16,
+      224.36,
+      224.62,
+      224.88,
+      225.04,
+      225.36,
+      225.88,
+      227.0
+    ]
+  },
+  {
+    "debut": 227.28,
+    "fin": 229.21,
+    "texte": "Quand elle est pleine, quand elle est vide, j'remets ma capuche",
+    "mots": [
+      227.28,
+      227.37,
+      227.46,
+      227.66,
+      228.26,
+      228.37,
+      228.48,
+      228.74,
+      228.84,
+      229.05,
+      229.16
+    ]
+  },
+  {
+    "debut": 229.26,
+    "fin": 231.15,
+    "texte": "Jamais lâché, peu d'quantité",
+    "mots": [
+      229.26,
+      229.7,
+      230.06,
+      230.7
+    ]
+  },
+  {
+    "debut": 231.2,
+    "fin": 233.25,
+    "texte": "On donne le temps, d'la qualité",
+    "mots": [
+      231.2,
+      231.42,
+      231.64,
+      231.86,
+      232.08,
+      232.72
+    ]
+  },
+  {
+    "debut": 233.3,
+    "fin": 235.05,
+    "texte": "Souvent spooney, tard la night",
+    "mots": [
+      233.3,
+      234.3,
+      234.58,
+      234.86,
+      234.98
+    ]
+  },
+  {
+    "debut": 235.1,
+    "fin": 236.89,
+    "texte": "On s'rappelle d'nos vies, d'la réalité",
+    "mots": [
+      235.1,
+      235.21,
+      235.45,
+      235.68,
+      235.8,
+      236.94
+    ]
+  },
+  {
+    "debut": 236.94,
+    "fin": 237.84,
+    "texte": "Dans l'regard, le vide rappelle nos démons",
+    "mots": [
+      236.94,
+      236.94,
+      236.94,
+      236.94,
+      236.94,
+      236.94,
+      236.94
+    ]
+  }
+]

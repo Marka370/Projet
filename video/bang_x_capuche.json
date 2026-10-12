@@ -1,29 +1,214 @@
 {
   "musique": "musique/bang_x_capuche_remix.mp3",
-  "debut": 31.4,
-  "duree": 30,
+  "debut": 27.0,
+  "duree": 38.3,
   "fps": 30,
   "bpm": 117.45,
-
   "theme": "capuche",
   "titre": "BANG x CAPUCHE",
-
   "couleurs": {
     "accent": "#ff1f3d",
     "texte": "#ffffff"
   },
-
+  "taille_paroles": 74,
+  "position_paroles": 0.86,
   "capuche": {
-    "apparition": 1.55,
-    "pause": [7.73, 9.77],
+    "apparition": 3.6,
+    "pause": [
+      12.13,
+      14.17
+    ],
     "impacts": [
-      { "t": 3.08,  "texte": "BANG" },
-      { "t": 9.77,  "texte": "CAPUCHE" },
-      { "t": 11.30, "texte": "BANG" },
-      { "t": 19.50, "texte": "BANG" },
-      { "t": 27.69, "texte": "BANG" }
+      {
+        "t": 7.48,
+        "texte": "BANG"
+      },
+      {
+        "t": 10.18,
+        "texte": "ÂME NOIRE"
+      },
+      {
+        "t": 14.17,
+        "texte": "LARMES"
+      },
+      {
+        "t": 20.02,
+        "texte": "YEUX ROUGES"
+      },
+      {
+        "t": 24.28,
+        "texte": "MATRICE"
+      },
+      {
+        "t": 26.44,
+        "texte": "SOURIRE"
+      },
+      {
+        "t": 32.18,
+        "texte": "CICATRICES"
+      },
+      {
+        "t": 36.7,
+        "texte": "PEACE"
+      }
+    ],
+    "scenes": [
+      {
+        "debut": 4.6,
+        "fin": 8.8,
+        "effet": "vent"
+      },
+      {
+        "debut": 8.9,
+        "fin": 12.1,
+        "effet": "ame_noire"
+      },
+      {
+        "debut": 12.13,
+        "fin": 17.8,
+        "effet": "pare_brise"
+      },
+      {
+        "debut": 17.84,
+        "fin": 21.9,
+        "effet": "yeux_rouges"
+      },
+      {
+        "debut": 21.98,
+        "fin": 25.95,
+        "effet": "matrice"
+      },
+      {
+        "debut": 26.02,
+        "fin": 30.1,
+        "effet": "sourire"
+      },
+      {
+        "debut": 30.22,
+        "fin": 35.6,
+        "effet": "cicatrices",
+        "temps": [
+          30.22,
+          31.24,
+          32.18
+        ]
+      },
+      {
+        "debut": 35.78,
+        "fin": 38.3,
+        "effet": "peace"
+      }
     ]
   },
-
-  "paroles": []
+  "paroles": [
+    {
+      "debut": 4.76,
+      "fin": 7.91,
+      "texte": "Une brise dans la vallée, j'descends d'la selle",
+      "mots": [
+        4.76,
+        5.02,
+        5.28,
+        5.56,
+        5.76,
+        6.18,
+        6.66,
+        7.16
+      ]
+    },
+    {
+      "debut": 8.9,
+      "fin": 12.91,
+      "texte": "Une bise sur mon âme noire, elle fait la belle",
+      "mots": [
+        8.9,
+        9.12,
+        9.46,
+        9.64,
+        9.94,
+        10.18,
+        10.42,
+        10.66,
+        10.92,
+        12.68
+      ]
+    },
+    {
+      "debut": 12.96,
+      "fin": 17.79,
+      "texte": "Hé poto, les larmes coulent sur le pare-brise",
+      "mots": [
+        12.96,
+        13.24,
+        14.4,
+        14.4,
+        14.9,
+        15.34,
+        15.56,
+        15.96
+      ]
+    },
+    {
+      "debut": 17.84,
+      "fin": 21.28,
+      "texte": "Les pneus glissent sur mes yeux rouges",
+      "mots": [
+        17.84,
+        18.02,
+        18.4,
+        19.42,
+        19.72,
+        20.02,
+        20.5
+      ]
+    },
+    {
+      "debut": 21.98,
+      "fin": 25.4,
+      "texte": "Les lions roulent dans la matrice",
+      "mots": [
+        21.98,
+        22.08,
+        22.5,
+        23.1,
+        23.66,
+        24.28
+      ]
+    },
+    {
+      "debut": 26.02,
+      "fin": 29.4,
+      "texte": "Gros sourire sur le gars triste",
+      "mots": [
+        26.02,
+        26.44,
+        27.26,
+        27.72,
+        27.9,
+        28.08
+      ]
+    },
+    {
+      "debut": 30.22,
+      "fin": 33.4,
+      "texte": "Pas d'AD sans cicatrices",
+      "mots": [
+        30.22,
+        30.34,
+        31.24,
+        32.18
+      ]
+    },
+    {
+      "debut": 35.78,
+      "fin": 38.1,
+      "texte": "C'est la vie, peace",
+      "mots": [
+        35.78,
+        36.04,
+        36.3,
+        36.7
+      ]
+    }
+  ]
 }
