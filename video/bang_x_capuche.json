@@ -1,0 +1,29 @@
+{
+  "musique": "musique/bang_x_capuche_remix.mp3",
+  "debut": 31.4,
+  "duree": 30,
+  "fps": 30,
+  "bpm": 117.45,
+
+  "theme": "capuche",
+  "titre": "BANG x CAPUCHE",
+
+  "couleurs": {
+    "accent": "#ff1f3d",
+    "texte": "#ffffff"
+  },
+
+  "capuche": {
+    "apparition": 1.55,
+    "pause": [7.73, 9.77],
+    "impacts": [
+      { "t": 3.08,  "texte": "BANG" },
+      { "t": 9.77,  "texte": "CAPUCHE" },
+      { "t": 11.30, "texte": "BANG" },
+      { "t": 19.50, "texte": "BANG" },
+      { "t": 27.69, "texte": "BANG" }
+    ]
+  },
+
+  "paroles": []
+}

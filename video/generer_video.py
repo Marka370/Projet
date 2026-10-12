@@ -61,6 +61,7 @@ DEFAUTS = {
     "paroles": [],
     "taille_paroles": 92,
     "police": None,
+    "theme": None,
 }
 
 
@@ -214,6 +215,12 @@ class Rendu:
         self.images = [self._preparer_image(p) for p in cfg["images"]]
         self.paroles = self._preparer_paroles(cfg["paroles"])
 
+        # Thème visuel sur mesure (ex. « capuche ») : remplace le rendu par défaut
+        self.theme = None
+        if cfg.get("theme") == "capuche":
+            from theme_capuche import ThemeCapuche
+            self.theme = ThemeCapuche(self)
+
     # ---- préparation -------------------------------------------------------
 
     def _preparer_image(self, chemin):
@@ -346,6 +353,10 @@ class Rendu:
         d.ellipse((cx - r1, cy - r1, cx + r1, cy + r1), fill=self.c_acc + (int(90 + 120 * pulse),))
 
     def textes(self, img, t, pulse):
+        self.textes_fixes(img)
+        self.textes_paroles(img, t, pulse)
+
+    def textes_fixes(self, img):
         d = ImageDraw.Draw(img)
         cfg = self.cfg
         if cfg["titre"]:
@@ -356,6 +367,7 @@ class Rendu:
             d.text((self.W / 2, self.H * 0.09 + 70 * self.s), cfg["sous_titre"], font=self.police_sous,
                    anchor="mm", fill=self.c_acc2, stroke_width=max(1, int(3 * self.s)), stroke_fill=(0, 0, 0))
 
+    def textes_paroles(self, img, t, pulse):
         for ligne in self.paroles:
             if not (ligne["debut"] - 0.05 <= t <= ligne["fin"] + 0.25):
                 continue
@@ -384,6 +396,8 @@ class Rendu:
     # ---- assemblage --------------------------------------------------------
 
     def image(self, i):
+        if self.theme:
+            return self.theme.image(i)
         fps = self.cfg["fps"]
         t = i / fps
         pulse, _ = impulsion(t, self.audio["beats"], 0.14)

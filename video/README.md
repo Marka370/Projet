@@ -63,6 +63,16 @@ Les mots sont répartis automatiquement sur la ligne. Pour caler chaque mot pré
 
 Astuce : `--beats` affiche les temps de tous les beats (`●` = beat fort) — pose tes mots dessus pour un rendu bien synchro.
 
+## 🎨 Thèmes sur mesure
+
+`"theme": "capuche"` remplace le visuel par défaut par un univers **rue de nuit** (fichier `theme_capuche.py`) : silhouette à capuche aux yeux rouges, lune rouge sang entourée d'un spectre, skyline dont les immeubles montent et descendent comme un égaliseur, pluie, grain de film. Les **impacts** (« BANG »…) écrasent un mot à l'écran avec onde de choc, flash, tremblement et glitch. La **pause** avant le drop ralentit la pluie, zoome sur la capuche et écrit le mot du drop lettre par lettre.
+
+Exemple complet : `bang_x_capuche.json` (passage 0:31 → 1:01 du son, impacts calés sur les gros coups de basse, tous les 16 temps).
+
+```bash
+python generer_video.py bang_x_capuche.json
+```
+
 ## ⚠️ À savoir
 
 - **Droits** : une musique protégée peut être utilisée sur TikTok si tu ajoutes le son **depuis la bibliothèque TikTok** ; pour publier ailleurs, utilise une musique dont tu as les droits.
