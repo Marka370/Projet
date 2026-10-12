@@ -1,0 +1,33 @@
+{
+  "musique": "musique/demo.wav",
+  "debut": 0,
+  "duree": 20,
+  "fps": 30,
+
+  "titre": "Ton titre ici",
+  "sous_titre": "@ton_pseudo",
+
+  "couleurs": {
+    "fond_haut": "#1a0b3d",
+    "fond_bas": "#05010f",
+    "accent": "#ff2d75",
+    "accent2": "#29e7ff",
+    "texte": "#ffffff"
+  },
+
+  "visualiseur": true,
+  "particules": true,
+  "flash": true,
+
+  "images": [],
+  "images_tous_les_n_beats": 4,
+
+  "taille_paroles": 92,
+  "paroles": [
+    { "debut": 0.0,  "fin": 3.9,  "texte": "Mets tes paroles ici" },
+    { "debut": 4.0,  "fin": 7.9,  "texte": "Chaque mot apparaît en rythme" },
+    { "debut": 8.0,  "fin": 11.9, "texte": "Le mot chanté passe en couleur" },
+    { "debut": 12.0, "fin": 15.9, "texte": "Tu peux caler chaque mot", "mots": [12.0, 12.5, 13.0, 14.0, 15.0] },
+    { "debut": 16.0, "fin": 20.0, "texte": "ET ÇA PART !" }
+  ]
+}

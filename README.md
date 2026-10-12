@@ -3,6 +3,7 @@
 | Dossier | Contenu |
 |---|---|
 | 📚 [`ressources/`](ressources/README.md) | **Bibliothèque de ressources** classée par thème (code, animations, mapping, assets libres, outils…) et par projet (Naruto RP…) |
+| 🎬 [`video/`](video/README.md) | **Vidéos musicales animées** façon TikTok : paroles, visualiseur et effets synchronisés sur la musique |
 | 🤖 `bot/`, `config/` | Bot Discord et mise en place automatique du serveur (détails ci-dessous) |
 
 ---
