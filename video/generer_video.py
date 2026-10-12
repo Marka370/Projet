@@ -496,6 +496,7 @@ def main():
     ap.add_argument("script", nargs="?", default=str(DOSSIER / "script.json"))
     ap.add_argument("-o", "--sortie", help="fichier .mp4 de sortie (défaut : sortie/<nom du script>.mp4)")
     ap.add_argument("--apercu", action="store_true", help="rendu rapide en demi-résolution")
+    ap.add_argument("--echelle", type=float, help="taille par rapport au 1080×1920 (ex. 0.6667 → 720×1280)")
     ap.add_argument("--beats", action="store_true", help="affiche les temps des beats pour caler les paroles")
     args = ap.parse_args()
 
@@ -515,7 +516,8 @@ def main():
 
     nom = Path(args.script).stem + ("_apercu" if args.apercu else "")
     sortie = Path(args.sortie) if args.sortie else DOSSIER / "sortie" / f"{nom}.mp4"
-    generer(cfg, sortie, echelle=0.5 if args.apercu else 1.0, crf=26 if args.apercu else 18)
+    echelle = args.echelle or (0.5 if args.apercu else 1.0)
+    generer(cfg, sortie, echelle=echelle, crf=26 if args.apercu else 18)
 
 
 if __name__ == "__main__":

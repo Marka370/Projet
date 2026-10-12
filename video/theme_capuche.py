@@ -35,6 +35,8 @@ import math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
+from scenes_capuche import TOUS_EFFETS, ScenesCapuche, coller
+
 POLICE_IMPACT = [
     "/usr/share/fonts/opentype/inter/InterDisplay-BlackItalic.otf",
     "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf",
@@ -60,18 +62,7 @@ def lisse(x):
     return x * x * (3 - 2 * x)
 
 
-def coller(dest, src, x, y):
-    """alpha_composite qui accepte des positions hors de l'image."""
-    x, y = int(round(x)), int(round(y))
-    sx, sy = max(0, -x), max(0, -y)
-    dx, dy = max(0, x), max(0, y)
-    w = min(src.width - sx, dest.width - dx)
-    h = min(src.height - sy, dest.height - dy)
-    if w > 0 and h > 0:
-        dest.alpha_composite(src, (dx, dy), (sx, sy, sx + w, sy + h))
-
-
-class ThemeCapuche:
+class ThemeCapuche(ScenesCapuche):
     def __init__(self, r):
         self.r = r
         self.cfg = r.cfg
@@ -98,6 +89,7 @@ class ThemeCapuche:
         self._silhouette()
         self._brouillard(rng)
         self._effets(rng)
+        self._effets2(rng)
         self._pluie(rng)
         self._grain(rng)
 
@@ -140,6 +132,7 @@ class ThemeCapuche:
         # disque + halo
         disque = np.clip((1.0 - d) * 40, 0, 1)
         halo = np.clip(np.exp(-(d - 1) * 2.2), 0, 1) * (d >= 1) * 0.55
+        halo *= np.clip((1.68 - d) / 0.5, 0, 1)  # s'éteint avant le bord de l'image
         # cratères : bruit basse fréquence
         bruit = Image.fromarray((rng.random((12, 12)) * 255).astype(np.uint8)).resize(
             (taille, taille), Image.BICUBIC)
@@ -177,7 +170,7 @@ class ThemeCapuche:
                 continue
             bande = int(abs(centre - 0.5) * 2 * (n_bandes - 1) * 0.8)  # graves au centre
             self.immeubles.append({
-                "img": img, "x": x, "base": (160 + rng.random() * 300) * u,
+                "img": img, "x": x, "base": (90 + rng.random() * 230) * u,
                 "bande": min(bande, n_bandes - 1), "w": w,
             })
             x += w * (0.75 + rng.random() * 0.4)
@@ -261,8 +254,10 @@ class ThemeCapuche:
         for i in range(n_img):
             t = i / fps
             kv, kpc = self.k_scene("vent", t), self.k_scene("peace", t)
+            calme = max(self.k_scene("aube", t), self.k_scene("matin", t), self.k_scene("lumiere", t))
             vitesse[i] = ((1 + 1.2 * self.audio["basses"][i]) * (1 - 0.85 * self._k_pause(t))
-                          * (1 + 0.8 * kv) * (1 - 0.75 * kpc))
+                          * (1 + 0.8 * kv) * (1 - 0.75 * kpc) * (1 + 0.9 * self.k_scene("tempete", t))
+                          * (1 - 0.6 * calme))
             vent[i] = 25 + 700 * kv
         self.g_avance = np.cumsum(vitesse) / fps * 0.9
         self.brouillard_x = np.cumsum(vent) / fps * self.u
@@ -322,7 +317,7 @@ class ThemeCapuche:
         self.grains = []
         for _ in range(6):
             g = Image.fromarray(rng.integers(0, 255, (h, w), dtype=np.uint8)).resize((self.W, self.H), Image.NEAREST)
-            self.grains.append(((np.asarray(g, np.int16) - 128) * 0.09).astype(np.float32)[..., None])
+            self.grains.append(((np.asarray(g, np.int16) - 128) * float(self.cfg.get("grain", 0.09))).astype(np.float32)[..., None])
 
     # ------------------------------------------------------------------ #
     # Chronologie
@@ -372,8 +367,19 @@ class ThemeCapuche:
         imp, age, n_imp = self._impact(t)
         k_imp = math.exp(-age / 0.22) if age < 3 else 0.0
         apparu = lisse((t - self.apparition) / 1.2)
-        ks = {e: self.k_scene(e, t) for e in ("vent", "ame_noire", "pare_brise", "yeux_rouges",
-                                                  "matrice", "sourire", "cicatrices", "peace")}
+        ks = {e: self.k_scene(e, t) for e in TOUS_EFFETS}
+        temps_scene = {}
+        for e, k in ks.items():
+            if k > 0:
+                sc_e = self._scene(e, t)
+                if sc_e:
+                    temps_scene[e] = t - sc_e["debut"]
+                    temps_scene[e + "_duree"] = sc_e["fin"] - sc_e["debut"]
+                    temps_scene[e + "_tir"] = sc_e.get("tir", 1.5)
+        if imp is not None and not imp.get("fort", True):
+            k_imp_fort = 0.0
+        else:
+            k_imp_fort = k_imp
         energie = (1 - 0.65 * kp) * (1 - 0.45 * ks["ame_noire"])
         # griffures : chaque coup de griffe secoue l'écran
         k_griffe, n_griffe, t_griffes = 0.0, -1, []
@@ -383,13 +389,15 @@ class ThemeCapuche:
             k_griffe, n_griffe = impulsion(t, np.array(t_griffes), 0.12)
 
         # 1. Ciel
-        lum = (0.85 + 0.5 * basse + 0.4 * k_imp) * energie
-        arr = np.broadcast_to(self.ciel * lum, (H, W, 3))
+        lum = (0.85 + 0.5 * basse + 0.4 * k_imp_fort + 0.9 * fort * ks["tempete"]) * energie
+        arr = np.broadcast_to(self.teinte_ciel(self.ciel * lum, ks), (H, W, 3))
         scene = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8)).convert("RGBA")
         lueur_fond = Image.new("RGBA", (W, H), (0, 0, 0, 0))  # ce qui brille derrière la silhouette
         lueur = Image.new("RGBA", (W, H), (0, 0, 0, 0))       # ce qui brille devant
         dlf = ImageDraw.Draw(lueur_fond)
         dl = ImageDraw.Draw(lueur)
+
+        self.avant_lune(scene, t, ks)
 
         # 2. Lune + spectre autour
         ech = 1 + 0.05 * basse + 0.08 * k_imp + 0.06 * kp
@@ -402,6 +410,7 @@ class ThemeCapuche:
             g = self.lune_R * ech * 0.95
             dlf.ellipse((self.lune_c[0] - g, self.lune_c[1] - g, self.lune_c[0] + g, self.lune_c[1] + g),
                         fill=(255, 225, 225, int(110 * ks["peace"])))
+        self.sur_lune(scene, dlf, t, ks, ech, temps_scene)
         R0 = self.lune_R * ech * 1.06
         n = len(spec)
         for k in range(2 * n):
@@ -417,18 +426,20 @@ class ThemeCapuche:
 
         # 3. Skyline égaliseur
         for b in self.immeubles:
-            h = b["base"] + spec[b["bande"]] ** 1.3 * 320 * u * energie
+            h = b["base"] + spec[b["bande"]] ** 1.3 * 260 * u * energie
             coller(scene, b["img"], b["x"], self.sol - h)
         dsc = ImageDraw.Draw(scene)
         dsc.rectangle((0, self.sol, W, H), fill=(6, 5, 7, 255))
         if ks["matrice"] > 0:
             self._matrice(scene, t, ks["matrice"])
+        self.decor(scene, t, ks, spec, fort, n_fort)
 
         # 4. Brouillard qui défile
         dx = self.brouillard_x[i] % W
         coller(scene, self.brouillard, -dx, self.sol - self.brouillard.height * 0.55)
 
         # 5. Silhouette (zoom lent pendant la pause, respire avec les basses)
+        apparu *= 1 - 0.7 * ks["matin"]
         if apparu > 0:
             sc = (1 + 0.015 * basse + 0.012 * pulse) * (1 + 0.16 * kp) * (1 + 0.14 * lisse(ks["yeux_rouges"]))
             w, h = int(W * sc), int(self.sil_h * sc)
@@ -465,6 +476,7 @@ class ThemeCapuche:
             if ks["pare_brise"] > 0:
                 sc_pb = self._scene("pare_brise", t)
                 self._larmes(dsc, dl, yeux, t - sc_pb["debut"] if sc_pb else 9, ks["pare_brise"], sc, (255, 40, 60))
+            self.sur_perso(scene, dsc, dl, t, ks, ox, oy, sc, yeux, self.audio["beats"])
             if ks["sourire"] > 0:
                 self._sourire(dsc, dl, yeux, ks["sourire"], sc)
                 sc_s = self._scene("sourire", t)
@@ -473,7 +485,7 @@ class ThemeCapuche:
             centre_yeux = (self.cx, H * 0.6)
 
         # 6. Onde de choc des impacts
-        if age < 0.7:
+        if age < 0.7 and k_imp_fort > 0:
             rr = age * 2600 * u
             ep = max(2, int(26 * u * (1 - age / 0.7)))
             a = int(255 * (1 - age / 0.7))
@@ -496,14 +508,15 @@ class ThemeCapuche:
             self._phares(dl, t, ks["yeux_rouges"])
         if t_griffes:
             self._griffes(dsc, dl, t, t_griffes, ks["cicatrices"])
+        self.premier_plan(scene, dl, t, ks, temps_scene)
 
         # 8. Halo lumineux
         self._briller(scene, lueur)
 
         # 9. Caméra : zoom « punch » + tremblement
-        secousse = k_imp + 0.35 * fort + 0.8 * k_griffe
+        secousse = k_imp_fort + 0.35 * fort + 0.8 * k_griffe + 0.3 * pulse * ks["combat"]
         if secousse > 0.02:
-            z = 1 + 0.07 * k_imp + 0.025 * fort + 0.04 * k_griffe
+            z = 1 + 0.07 * k_imp_fort + 0.025 * fort + 0.04 * k_griffe + 0.02 * pulse * ks["combat"]
             rng = np.random.default_rng((n_imp + 1) * 100000 + (n_griffe + 1) * 1000 + n_fort + 1)
             cw, ch = W / z, H / z
             ox, oy = np.clip(rng.uniform(-1, 1, 2) * 34 * u * secousse,
@@ -512,6 +525,7 @@ class ThemeCapuche:
                                  box=((W - cw) / 2 + ox, (H - ch) / 2 + oy, (W + cw) / 2 + ox, (H + ch) / 2 + oy))
 
         arr = np.asarray(scene.convert("RGB"), np.float32) * (r.vignette ** 1.6)
+        arr = self.post(arr, t, ks, i)
         scene = Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8)).convert("RGBA")
 
         if ks["pare_brise"] > 0:
@@ -526,10 +540,10 @@ class ThemeCapuche:
 
         # 11. Post-traitement : flash, aberration chromatique, grain, fondus
         arr = np.asarray(scene.convert("RGB"), np.float32)
-        flash = 0.4 * math.exp(-age / 0.07) if age < 0.5 else 0.0
+        flash = 0.4 * math.exp(-age / 0.07) if age < 0.5 and k_imp_fort > 0 else 0.0
         if flash > 0.01:
             arr = arr + (np.array([255, 200, 200], np.float32) - arr) * flash
-        dec = int((22 * k_imp + 5 * fort + 18 * k_griffe) * u)
+        dec = int((22 * k_imp_fort + 5 * k_imp + 5 * fort + 18 * k_griffe) * u)
         if dec > 0:
             arr[..., 0] = np.roll(arr[..., 0], dec, axis=1)
             arr[..., 2] = np.roll(arr[..., 2], -dec, axis=1)

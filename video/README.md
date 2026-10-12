@@ -69,7 +69,7 @@ Astuce : `--beats` affiche les temps de tous les beats (`●` = beat fort) — p
 
 - **Impacts** : un mot s'écrase à l'écran (onde de choc, flash, tremblement, glitch).
 - **Pause** avant le drop : la pluie ralentit, zoom sur la capuche, le mot du drop s'écrit lettre par lettre.
-- **Scènes** qui illustrent les paroles, chacune sur une plage de temps :
+- **Scènes** qui illustrent les paroles, chacune sur une plage de temps (`theme_capuche.py` + `scenes_capuche.py`) :
 
 | Effet | Ce qui se passe |
 |---|---|
@@ -81,11 +81,42 @@ Astuce : `--beats` affiche les temps de tous les beats (`●` = beat fort) — p
 | `sourire` | sourire lumineux dans l'ombre de la capuche, une larme |
 | `cicatrices` | griffures qui lacèrent l'écran (sur les temps donnés dans `temps`) |
 | `peace` | la pluie s'arrête, la lune s'éclaircit, tout se calme |
+| `horloge` | la lune devient une horloge dont les aiguilles s'emballent |
+| `tempete` | éclairs sur les gros beats, ciel qui flashe, pluie battante |
+| `palmiers` | coucher de soleil de Los Angeles, palmiers qui surgissent |
+| `flammes` | la ville brûle, les flammes suivent le spectre |
+| `fumee_blanche` | braise et fumée blanche devant la capuche |
+| `tresor` | pièces d'or qui tombent et scintillent |
+| `regards` | des yeux rouges s'ouvrent dans l'ombre |
+| `likes` | cœurs qui montent comme sur TikTok |
+| `projecteur` | tout s'éteint sauf un faisceau sur la silhouette |
+| `combat` | onde de choc à chaque temps, caméra qui cogne |
+| `diamants` | diamants qui tombent en tournant |
+| `nuit` | étoiles, étoile filante, lune en croissant |
+| `souvenirs` | vieux film sépia qui scintille, rayures |
+| `demons` | des cornes poussent sur la capuche |
+| `aube` | soleil doré avec rayons, la pluie se calme |
+| `gris` | tout passe en noir et blanc |
+| `silhouettes` | d'autres capuches apparaissent autour (les frères, les cliquos) |
+| `matin` | ciel bleu du matin, la silhouette disparaît presque |
+| `lumiere` | rayons de lumière venus d'en haut |
+| `ondes` | ondes sonores qui partent de la lune |
+| `billets` | billets de 20 qui volent |
+| `lettres_z` | des Z qui flottent |
+| `glitch` | l'image se déchire et se décale |
+| `gyrophares` | lumières de police rouge / bleu |
+| `lune_tir` | viseur sur la lune, tir, la lune se fissure (`tir` = moment du tir) |
+| `phases` | une ombre passe sur la lune (pleine → vide) |
 
-Exemple complet : **`bang_x_capuche.json`** (0:27 → 1:05 du son, 8 phrases, un visuel par phrase, impacts sur les mots clés).
+Un impact peut être `"fort": false` : le mot s'écrase sans flash ni tremblement (pratique pour un mot clé par phrase).
+
+**Exemples :**
+- **`bang_x_capuche_complet.json`** — **le son entier (4:47)** : 46 phrases, chacune avec sa scène et son mot clé, BANG sur l'arrivée des basses, outro sous les étoiles.
+- `bang_x_capuche.json` — extrait de 38 s (0:27 → 1:05) pour TikTok.
 
 ```bash
-python generer_video.py bang_x_capuche.json
+python generer_video.py bang_x_capuche_complet.json                       # 1080×1920 (~25 min)
+python generer_video.py bang_x_capuche_complet.json --echelle 0.6667      # 720×1280, plus rapide et plus léger
 ```
 
 ## 🎵 Le son « Bang x Capuche » et ses extraits
@@ -96,7 +127,7 @@ Tout est dans `musique/` pour les prochains tests :
 |---|---|
 | `bang_x_capuche_remix.mp3` | le son complet (4:47, 117 BPM) |
 | `bang_x_capuche_paroles.txt` | les paroles complètes |
-| `bang_x_capuche_paroles_calees.json` | chaque ligne et chaque mot avec son temps dans le son (calage automatique) |
+| `bang_x_capuche_paroles_calees.json` | chaque ligne et chaque mot avec son temps dans le son (calage automatique, lignes douteuses corrigées à la main) |
 | `bang_x_capuche_transcription.json` | transcription automatique brute, mot par mot (sert au calage) |
 | `extraits/01_couplet1_debut_0m27-1m05.mp3` | début du couplet 1 (celui de la vidéo) |
 | `extraits/02_couplet1_suite_1m05-1m52.mp3` | suite du couplet 1 (« Et le temps m'baise… ») |

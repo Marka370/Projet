@@ -1,0 +1,1161 @@
+{
+ "musique": "musique/bang_x_capuche_remix.mp3",
+ "debut": 0,
+ "duree": null,
+ "fps": 30,
+ "bpm": 117.45,
+ "theme": "capuche",
+ "titre": "BANG x CAPUCHE",
+ "couleurs": {
+  "accent": "#ff1f3d",
+  "texte": "#ffffff"
+ },
+ "taille_paroles": 74,
+ "position_paroles": 0.86,
+ "capuche": {
+  "apparition": 27.5,
+  "pause": [
+   39.13,
+   41.17
+  ],
+  "impacts": [
+   {
+    "t": 32.76,
+    "texte": "VALLÉE",
+    "fort": false
+   },
+   {
+    "t": 34.48,
+    "texte": "BANG"
+   },
+   {
+    "t": 37.19,
+    "texte": "ÂME NOIRE",
+    "fort": false
+   },
+   {
+    "t": 41.4,
+    "texte": "LARMES"
+   },
+   {
+    "t": 47.02,
+    "texte": "YEUX ROUGES",
+    "fort": false
+   },
+   {
+    "t": 51.3,
+    "texte": "MATRICE",
+    "fort": false
+   },
+   {
+    "t": 53.4,
+    "texte": "SOURIRE",
+    "fort": false
+   },
+   {
+    "t": 58.94,
+    "texte": "CICATRICES",
+    "fort": false
+   },
+   {
+    "t": 65.25,
+    "texte": "PEACE",
+    "fort": false
+   },
+   {
+    "t": 66.06,
+    "texte": "LE TEMPS",
+    "fort": false
+   },
+   {
+    "t": 71.72,
+    "texte": "TEMPÊTE"
+   },
+   {
+    "t": 84.54,
+    "texte": "LOS ANGELES"
+   },
+   {
+    "t": 88.86,
+    "texte": "HELLS ANGELS",
+    "fort": false
+   },
+   {
+    "t": 93.1,
+    "texte": "LA GARO",
+    "fort": false
+   },
+   {
+    "t": 97.76,
+    "texte": "TRÉSOR",
+    "fort": false
+   },
+   {
+    "t": 101.6,
+    "texte": "CE REGARD",
+    "fort": false
+   },
+   {
+    "t": 104.48,
+    "texte": "J'AIME",
+    "fort": false
+   },
+   {
+    "t": 107.0,
+    "texte": "SEUL",
+    "fort": false
+   },
+   {
+    "t": 114.4,
+    "texte": "JAMAIS LÂCHÉ"
+   },
+   {
+    "t": 118.25,
+    "texte": "QUALITÉ",
+    "fort": false
+   },
+   {
+    "t": 119.06,
+    "texte": "TARD LA NIGHT",
+    "fort": false
+   },
+   {
+    "t": 122.14,
+    "texte": "RÉALITÉ",
+    "fort": false
+   },
+   {
+    "t": 133.76,
+    "texte": "DÉMONS"
+   },
+   {
+    "t": 150.24,
+    "texte": "KIFFER MA VIE",
+    "fort": false
+   },
+   {
+    "t": 154.82,
+    "texte": "LA SÈRE-MI",
+    "fort": false
+   },
+   {
+    "t": 158.44,
+    "texte": "PAS SI FACILE",
+    "fort": false
+   },
+   {
+    "t": 162.5,
+    "texte": "MES FRÈRES",
+    "fort": false
+   },
+   {
+    "t": 165.84,
+    "texte": "LE MATIN",
+    "fort": false
+   },
+   {
+    "t": 170.8,
+    "texte": "COMBATTRE LE NOIR"
+   },
+   {
+    "t": 174.18,
+    "texte": "BON DIEU",
+    "fort": false
+   },
+   {
+    "t": 178.94,
+    "texte": "OBSCURITÉ"
+   },
+   {
+    "t": 183.34,
+    "texte": "FLOWS DE DINGUE",
+    "fort": false
+   },
+   {
+    "t": 186.51,
+    "texte": "L'ÂME",
+    "fort": false
+   },
+   {
+    "t": 191.3,
+    "texte": "DES MILLIERS",
+    "fort": false
+   },
+   {
+    "t": 195.18,
+    "texte": "DES Z",
+    "fort": false
+   },
+   {
+    "t": 202.22,
+    "texte": "CLIQUOS",
+    "fort": false
+   },
+   {
+    "t": 204.14,
+    "texte": "UNE DOSE ?",
+    "fort": false
+   },
+   {
+    "t": 206.72,
+    "texte": "CHANGER DE VIE"
+   },
+   {
+    "t": 211.06,
+    "texte": "PNL",
+    "fort": false
+   },
+   {
+    "t": 215.49,
+    "texte": "LA FLICAILLE",
+    "fort": false
+   },
+   {
+    "t": 223.52,
+    "texte": "HÉRITAGE",
+    "fort": false
+   },
+   {
+    "t": 224.98,
+    "texte": "J'TIRE SUR LA LUNE"
+   },
+   {
+    "t": 229.11,
+    "texte": "CAPUCHE",
+    "fort": false
+   },
+   {
+    "t": 229.36,
+    "texte": "JAMAIS LÂCHÉ"
+   },
+   {
+    "t": 233.05,
+    "texte": "QUALITÉ",
+    "fort": false
+   },
+   {
+    "t": 234.35,
+    "texte": "TARD LA NIGHT",
+    "fort": false
+   },
+   {
+    "t": 236.55,
+    "texte": "RÉALITÉ",
+    "fort": false
+   }
+  ],
+  "scenes": [
+   {
+    "debut": 31.82,
+    "fin": 35.89,
+    "effet": "vent"
+   },
+   {
+    "debut": 35.94,
+    "fin": 40.01,
+    "effet": "ame_noire"
+   },
+   {
+    "debut": 40.06,
+    "fin": 44.79,
+    "effet": "pare_brise"
+   },
+   {
+    "debut": 44.84,
+    "fin": 48.93,
+    "effet": "yeux_rouges"
+   },
+   {
+    "debut": 48.98,
+    "fin": 53.05,
+    "effet": "matrice"
+   },
+   {
+    "debut": 53.1,
+    "fin": 57.17,
+    "effet": "sourire"
+   },
+   {
+    "debut": 57.22,
+    "fin": 62.67,
+    "effet": "cicatrices",
+    "temps": [
+     57.22,
+     57.34,
+     58.66
+    ]
+   },
+   {
+    "debut": 62.72,
+    "fin": 65.45,
+    "effet": "peace"
+   },
+   {
+    "debut": 65.5,
+    "fin": 68.81,
+    "effet": "horloge"
+   },
+   {
+    "debut": 68.86,
+    "fin": 81.67,
+    "effet": "tempete"
+   },
+   {
+    "debut": 81.72,
+    "fin": 85.63,
+    "effet": "palmiers"
+   },
+   {
+    "debut": 85.68,
+    "fin": 91.17,
+    "effet": "flammes"
+   },
+   {
+    "debut": 91.22,
+    "fin": 95.75,
+    "effet": "fumee_blanche"
+   },
+   {
+    "debut": 95.8,
+    "fin": 97.99,
+    "effet": "tresor"
+   },
+   {
+    "debut": 98.04,
+    "fin": 103.43,
+    "effet": "regards"
+   },
+   {
+    "debut": 103.48,
+    "fin": 106.95,
+    "effet": "likes"
+   },
+   {
+    "debut": 107.0,
+    "fin": 114.35,
+    "effet": "projecteur"
+   },
+   {
+    "debut": 114.4,
+    "fin": 116.55,
+    "effet": "combat"
+   },
+   {
+    "debut": 116.6,
+    "fin": 118.45,
+    "effet": "diamants"
+   },
+   {
+    "debut": 118.5,
+    "fin": 120.25,
+    "effet": "nuit"
+   },
+   {
+    "debut": 120.3,
+    "fin": 131.75,
+    "effet": "souvenirs"
+   },
+   {
+    "debut": 131.8,
+    "fin": 147.61,
+    "effet": "demons"
+   },
+   {
+    "debut": 147.66,
+    "fin": 153.27,
+    "effet": "aube"
+   },
+   {
+    "debut": 153.32,
+    "fin": 157.33,
+    "effet": "gris"
+   },
+   {
+    "debut": 157.38,
+    "fin": 161.23,
+    "effet": "cicatrices",
+    "temps": [
+     157.38,
+     157.86,
+     158.44
+    ]
+   },
+   {
+    "debut": 161.28,
+    "fin": 165.79,
+    "effet": "silhouettes"
+   },
+   {
+    "debut": 165.84,
+    "fin": 169.49,
+    "effet": "matin"
+   },
+   {
+    "debut": 169.54,
+    "fin": 173.63,
+    "effet": "combat"
+   },
+   {
+    "debut": 173.68,
+    "fin": 177.93,
+    "effet": "lumiere"
+   },
+   {
+    "debut": 177.98,
+    "fin": 182.03,
+    "effet": "tempete"
+   },
+   {
+    "debut": 182.08,
+    "fin": 186.01,
+    "effet": "ondes"
+   },
+   {
+    "debut": 186.06,
+    "fin": 190.31,
+    "effet": "ame_noire"
+   },
+   {
+    "debut": 190.36,
+    "fin": 194.35,
+    "effet": "billets"
+   },
+   {
+    "debut": 194.4,
+    "fin": 198.63,
+    "effet": "lettres_z"
+   },
+   {
+    "debut": 198.68,
+    "fin": 202.45,
+    "effet": "silhouettes"
+   },
+   {
+    "debut": 202.5,
+    "fin": 206.67,
+    "effet": "fumee_blanche"
+   },
+   {
+    "debut": 206.72,
+    "fin": 210.55,
+    "effet": "glitch"
+   },
+   {
+    "debut": 210.6,
+    "fin": 213.31,
+    "effet": "ondes"
+   },
+   {
+    "debut": 213.36,
+    "fin": 218.89,
+    "effet": "gyrophares"
+   },
+   {
+    "debut": 218.94,
+    "fin": 223.72,
+    "effet": "tresor"
+   },
+   {
+    "debut": 223.77,
+    "fin": 227.21,
+    "effet": "lune_tir",
+    "tir": 1.21
+   },
+   {
+    "debut": 227.26,
+    "fin": 229.31,
+    "effet": "phases"
+   },
+   {
+    "debut": 229.36,
+    "fin": 231.25,
+    "effet": "combat"
+   },
+   {
+    "debut": 231.3,
+    "fin": 233.25,
+    "effet": "diamants"
+   },
+   {
+    "debut": 233.3,
+    "fin": 234.55,
+    "effet": "nuit"
+   },
+   {
+    "debut": 234.6,
+    "fin": 244.0,
+    "effet": "souvenirs"
+   },
+   {
+    "debut": 238.55,
+    "fin": 287.3,
+    "effet": "peace"
+   },
+   {
+    "debut": 238.55,
+    "fin": 287.3,
+    "effet": "nuit"
+   }
+  ]
+ },
+ "paroles": [
+  {
+   "debut": 31.82,
+   "fin": 35.89,
+   "texte": "Une brise dans la vallée, j'descends d'la selle",
+   "mots": [
+    31.82,
+    32.02,
+    32.28,
+    32.56,
+    32.76,
+    33.18,
+    33.66,
+    34.18
+   ]
+  },
+  {
+   "debut": 35.94,
+   "fin": 40.01,
+   "texte": "Une bise sur mon âme noire, elle fait la belle",
+   "mots": [
+    35.94,
+    36.12,
+    36.46,
+    36.64,
+    36.96,
+    37.19,
+    37.41,
+    37.64,
+    37.94,
+    39.78
+   ]
+  },
+  {
+   "debut": 40.06,
+   "fin": 44.79,
+   "texte": "Hé poto, les larmes coulent sur le pare-brise",
+   "mots": [
+    40.06,
+    40.34,
+    41.4,
+    41.4,
+    41.86,
+    42.34,
+    42.56,
+    42.96
+   ]
+  },
+  {
+   "debut": 44.84,
+   "fin": 48.93,
+   "texte": "Les pneus glissent sur mes yeux rouges",
+   "mots": [
+    44.84,
+    45.02,
+    45.38,
+    46.42,
+    46.74,
+    47.02,
+    47.52
+   ]
+  },
+  {
+   "debut": 48.98,
+   "fin": 53.05,
+   "texte": "Les lions roulent dans la matrice",
+   "mots": [
+    48.98,
+    49.12,
+    49.5,
+    50.1,
+    50.66,
+    51.3
+   ]
+  },
+  {
+   "debut": 53.1,
+   "fin": 57.17,
+   "texte": "Gros sourire sur le gars triste",
+   "mots": [
+    53.1,
+    53.4,
+    54.28,
+    54.76,
+    54.94,
+    55.12
+   ]
+  },
+  {
+   "debut": 57.22,
+   "fin": 62.36,
+   "texte": "Pas d'AD sans cicatrices",
+   "mots": [
+    57.22,
+    57.34,
+    58.66,
+    58.94
+   ]
+  },
+  {
+   "debut": 62.72,
+   "fin": 65.45,
+   "texte": "C'est la vie, peace",
+   "mots": [
+    62.72,
+    63.08,
+    63.38,
+    65.25
+   ]
+  },
+  {
+   "debut": 65.5,
+   "fin": 68.81,
+   "texte": "Et le temps m'baise (baise)",
+   "mots": [
+    65.5,
+    65.78,
+    66.06,
+    66.34,
+    66.9
+   ]
+  },
+  {
+   "debut": 68.86,
+   "fin": 78.98,
+   "texte": "Tant d'haine (haine) s'évacue d'mon corps et crée la tempête (oh l'blème, oh l'blème)",
+   "mots": [
+    68.86,
+    69.14,
+    69.7,
+    69.98,
+    70.64,
+    70.89,
+    71.01,
+    71.12,
+    71.44,
+    71.72,
+    72.0,
+    72.28,
+    73.66,
+    73.94
+   ]
+  },
+  {
+   "debut": 81.72,
+   "fin": 85.57,
+   "texte": "J'ai songé, j'ai songé, à fuir à Los Angeles",
+   "mots": [
+    81.72,
+    82.04,
+    82.74,
+    83.06,
+    83.7,
+    83.86,
+    84.1,
+    84.54,
+    84.82
+   ]
+  },
+  {
+   "debut": 85.68,
+   "fin": 90.4,
+   "texte": "J'me suis rongé, cerveau rodé comme un Hells Angels",
+   "mots": [
+    85.68,
+    86.12,
+    86.34,
+    87.18,
+    87.46,
+    88.2,
+    88.48,
+    88.86,
+    89.14
+   ]
+  },
+  {
+   "debut": 91.22,
+   "fin": 95.75,
+   "texte": "J'ai tapé dans l'paquet d'guinz la garo est tie-sor",
+   "mots": [
+    91.22,
+    91.52,
+    92.0,
+    92.1,
+    92.59,
+    93.1,
+    93.34,
+    93.86,
+    95.24
+   ]
+  },
+  {
+   "debut": 95.8,
+   "fin": 97.99,
+   "texte": "Dernière paire aux ied-ps, papa est posé sur l'trésor",
+   "mots": [
+    95.8,
+    96.08,
+    96.36,
+    96.49,
+    96.76,
+    97.2,
+    97.48,
+    97.62,
+    97.76
+   ]
+  },
+  {
+   "debut": 98.04,
+   "fin": 103.43,
+   "texte": "Ce flow me stresse, cette vie me gêne, ce regard me gêne",
+   "mots": [
+    98.04,
+    98.27,
+    98.51,
+    98.74,
+    99.98,
+    100.38,
+    100.66,
+    101.32,
+    101.6,
+    102.14,
+    102.54,
+    103.2
+   ]
+  },
+  {
+   "debut": 103.48,
+   "fin": 105.18,
+   "texte": "Sans cesse cette pute met \"j'aime\" (clique, j'aime)",
+   "mots": [
+    103.48,
+    103.76,
+    104.14,
+    104.28,
+    104.38,
+    104.48,
+    104.68,
+    104.78
+   ]
+  },
+  {
+   "debut": 107.0,
+   "fin": 114.35,
+   "texte": "Seul sous la capuche",
+   "mots": [
+    107.0,
+    107.15,
+    114.15,
+    114.15
+   ]
+  },
+  {
+   "debut": 114.4,
+   "fin": 115.99,
+   "texte": "Jamais lâché, peu d'quantité",
+   "mots": [
+    114.4,
+    114.88,
+    115.16,
+    115.44
+   ]
+  },
+  {
+   "debut": 116.6,
+   "fin": 118.45,
+   "texte": "On donne le temps, d'la qualité",
+   "mots": [
+    116.6,
+    116.88,
+    117.16,
+    117.44,
+    117.72,
+    118.25
+   ]
+  },
+  {
+   "debut": 118.5,
+   "fin": 120.25,
+   "texte": "Souvent spooney, tard la night",
+   "mots": [
+    118.5,
+    118.78,
+    119.06,
+    119.34,
+    119.62
+   ]
+  },
+  {
+   "debut": 120.3,
+   "fin": 126.08,
+   "texte": "On s'rappelle d'nos vies, d'la réalité",
+   "mots": [
+    120.3,
+    120.46,
+    120.78,
+    121.09,
+    121.24,
+    122.14
+   ]
+  },
+  {
+   "debut": 131.8,
+   "fin": 147.61,
+   "texte": "Dans l'regard, le vide rappelle nos démons",
+   "mots": [
+    131.8,
+    132.08,
+    132.64,
+    132.92,
+    133.2,
+    133.48,
+    133.76
+   ]
+  },
+  {
+   "debut": 147.66,
+   "fin": 151.81,
+   "texte": "Faut que j'apprenne à kiffer ma vie",
+   "mots": [
+    147.66,
+    149.44,
+    149.62,
+    150.16,
+    150.24,
+    150.78,
+    151.06
+   ]
+  },
+  {
+   "debut": 153.32,
+   "fin": 157.33,
+   "texte": "Des fois, à oublier la sère-mi",
+   "mots": [
+    153.32,
+    153.54,
+    153.74,
+    153.94,
+    154.54,
+    154.82
+   ]
+  },
+  {
+   "debut": 157.38,
+   "fin": 161.23,
+   "texte": "Mais bon tu sais, pas si facile",
+   "mots": [
+    157.38,
+    157.66,
+    157.86,
+    158.16,
+    158.44,
+    158.7,
+    161.0
+   ]
+  },
+  {
+   "debut": 161.28,
+   "fin": 163.95,
+   "texte": "Quand j'pense à c'que mes frères, sœurs vivent",
+   "mots": [
+    161.28,
+    161.56,
+    161.91,
+    162.05,
+    162.5,
+    162.7,
+    162.95,
+    163.2
+   ]
+  },
+  {
+   "debut": 165.84,
+   "fin": 169.49,
+   "texte": "Le matin, sûr, tu m'croiseras pas (tu m'croiseras jamais)",
+   "mots": [
+    165.84,
+    165.84,
+    166.42,
+    166.6,
+    166.74,
+    167.04,
+    168.42,
+    168.7,
+    169.26
+   ]
+  },
+  {
+   "debut": 169.54,
+   "fin": 172.4,
+   "texte": "J'aurais passé la nuit à combattre le noir",
+   "mots": [
+    169.54,
+    170.04,
+    170.28,
+    170.44,
+    170.64,
+    170.8,
+    171.14,
+    171.58
+   ]
+  },
+  {
+   "debut": 173.68,
+   "fin": 177.41,
+   "texte": "J'remercie l'bon Dieu, tu sais j'suis free mais bon j'suis bête",
+   "mots": [
+    173.68,
+    174.18,
+    174.64,
+    174.88,
+    175.08,
+    175.26,
+    175.58,
+    175.84,
+    176.14,
+    176.3,
+    176.66
+   ]
+  },
+  {
+   "debut": 177.98,
+   "fin": 182.03,
+   "texte": "Moi j'vais souvent vers l'obscurité dans la tempête",
+   "mots": [
+    177.98,
+    178.12,
+    178.68,
+    178.84,
+    178.94,
+    179.96,
+    180.34,
+    181.8
+   ]
+  },
+  {
+   "debut": 182.08,
+   "fin": 186.01,
+   "texte": "Elle me chuchote des flows de dingue",
+   "mots": [
+    182.08,
+    182.26,
+    182.78,
+    183.06,
+    183.34,
+    183.62,
+    185.78
+   ]
+  },
+  {
+   "debut": 186.06,
+   "fin": 190.31,
+   "texte": "Et je tords l'âme d'une gow de dingue",
+   "mots": [
+    186.06,
+    186.34,
+    186.43,
+    186.51,
+    187.46,
+    187.61,
+    187.68,
+    190.08
+   ]
+  },
+  {
+   "debut": 190.36,
+   "fin": 192.77,
+   "texte": "J'écoule des milliers de vingt",
+   "mots": [
+    190.36,
+    191.04,
+    191.3,
+    191.68,
+    192.02
+   ]
+  },
+  {
+   "debut": 194.4,
+   "fin": 198.63,
+   "texte": "J'vois des Z sur toutes les mains",
+   "mots": [
+    194.4,
+    194.82,
+    195.18,
+    195.46,
+    195.64,
+    195.9,
+    198.4
+   ]
+  },
+  {
+   "debut": 198.68,
+   "fin": 202.45,
+   "texte": "Et j'croise mes anciens cliquos",
+   "mots": [
+    198.68,
+    198.76,
+    199.2,
+    199.54,
+    202.22
+   ]
+  },
+  {
+   "debut": 202.5,
+   "fin": 205.17,
+   "texte": "M'disent \"Nabil des fois t'as une dose?\"",
+   "mots": [
+    202.5,
+    203.06,
+    203.44,
+    203.6,
+    203.78,
+    204.14,
+    204.42
+   ]
+  },
+  {
+   "debut": 206.72,
+   "fin": 210.26,
+   "texte": "Changer de vie avant qu'la vie m'change",
+   "mots": [
+    206.72,
+    207.14,
+    207.4,
+    207.62,
+    207.86,
+    208.1,
+    208.28
+   ]
+  },
+  {
+   "debut": 210.6,
+   "fin": 213.31,
+   "texte": "J'fais du PNL crois pas que je chante",
+   "mots": [
+    210.6,
+    210.84,
+    211.06,
+    211.56,
+    211.84,
+    212.04,
+    212.32,
+    213.08
+   ]
+  },
+  {
+   "debut": 213.36,
+   "fin": 218.4,
+   "texte": "À gauche, à droite, la flicaille me dévisage",
+   "mots": [
+    213.36,
+    213.66,
+    215.08,
+    215.29,
+    215.49,
+    215.69,
+    215.9,
+    216.48
+   ]
+  },
+  {
+   "debut": 218.94,
+   "fin": 223.72,
+   "texte": "On prend l'monde, c'est notre héritage",
+   "mots": [
+    218.94,
+    219.2,
+    219.36,
+    221.26,
+    223.52,
+    223.52
+   ]
+  },
+  {
+   "debut": 223.77,
+   "fin": 227.21,
+   "texte": "Celui d'la rue, grosse paix sur vous, j'tire sur la Lune",
+   "mots": [
+    223.77,
+    223.84,
+    224.0,
+    224.1,
+    224.34,
+    224.62,
+    224.86,
+    224.98,
+    225.36,
+    225.6,
+    226.98
+   ]
+  },
+  {
+   "debut": 227.26,
+   "fin": 229.31,
+   "texte": "Quand elle est pleine, quand elle est vide, j'remets ma capuche",
+   "mots": [
+    227.26,
+    227.46,
+    227.66,
+    227.96,
+    228.24,
+    228.36,
+    228.48,
+    228.74,
+    228.86,
+    229.11,
+    229.11
+   ]
+  },
+  {
+   "debut": 229.36,
+   "fin": 230.6,
+   "texte": "Jamais lâché, peu d'quantité",
+   "mots": [
+    229.36,
+    229.64,
+    229.92,
+    230.2
+   ]
+  },
+  {
+   "debut": 231.3,
+   "fin": 233.25,
+   "texte": "On donne le temps, d'la qualité",
+   "mots": [
+    231.3,
+    231.41,
+    231.53,
+    232.97,
+    233.05,
+    233.05
+   ]
+  },
+  {
+   "debut": 233.3,
+   "fin": 234.55,
+   "texte": "Souvent spooney, tard la night",
+   "mots": [
+    233.3,
+    234.3,
+    234.35,
+    234.35,
+    234.35
+   ]
+  },
+  {
+   "debut": 234.6,
+   "fin": 238.05,
+   "texte": "On s'rappelle d'nos vies, d'la réalité",
+   "mots": [
+    234.6,
+    234.71,
+    234.94,
+    235.16,
+    235.28,
+    236.55
+   ]
+  }
+ ],
+ "grain": 0.04
+}
